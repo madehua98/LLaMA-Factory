@@ -1,4 +1,41 @@
 {
+  "food101_retrieval_5": {
+    "file_name": "/mnt/madehua/fooddata/json_file/sharegpt/101_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "food101_retrieval_no_similarity_5": {
+    "file_name": "/mnt/madehua/fooddata/json_file/sharegpt/101_train_no_similarity.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "food101_text_retrieval_10": {
+    "file_name": "/mnt/madehua/fooddata/json_file/alpaca/101_train_10.json"
+  },
+  "food101_text_retrieval_5": {
+    "file_name": "/mnt/madehua/fooddata/json_file/alpaca/food101_train_5.json"
+  },
+  "food172_text_retrieval_10": {
+    "file_name": "/mnt/madehua/fooddata/json_file/alpaca/172_train_10.json"
+  },
   "identity": {
     "file_name": "identity.json"
   },

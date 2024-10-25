@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+model_name_or_path: /mnt/madehua/model/meta-llama/Meta-Llama-3-8B-Instruct
 
 ### method
 stage: sft
@@ -8,32 +8,33 @@ finetuning_type: full
 deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: identity,alpaca_en_demo
+dataset: food101_text_retrieval_5
 template: llama3
-cutoff_len: 1024
-max_samples: 1000
+cutoff_len: 512
+max_samples: 1000000
 overwrite_cache: true
-preprocessing_num_workers: 16
+preprocessing_num_workers: 64
 
 ### output
-output_dir: saves/llama3-8b/full/sft
+output_dir: /mnt/madehua/model/checkpoints/llama3-Instruct-food101-5
 logging_steps: 10
-save_steps: 500
+save_strategy: "epoch"
 plot_loss: true
-overwrite_output_dir: true
+overwrite_output_dir: false
 
 ### train
-per_device_train_batch_size: 1
-gradient_accumulation_steps: 2
+per_device_train_batch_size: 16
+gradient_accumulation_steps: 1
 learning_rate: 1.0e-5
-num_train_epochs: 3.0
+num_train_epochs: 2.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
 ddp_timeout: 180000000
 
 ### eval
+do_eval: false
 val_size: 0.1
 per_device_eval_batch_size: 1
-eval_strategy: steps
+eval_strategy: "no"
 eval_steps: 500

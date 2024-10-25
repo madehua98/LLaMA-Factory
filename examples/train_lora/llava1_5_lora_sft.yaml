@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: llava-hf/llava-1.5-7b-hf
+model_name_or_path: /mnt/madehua/model/llava-hf/llava-1.5-7b-hf
 
 ### method
 stage: sft
@@ -8,7 +8,7 @@ finetuning_type: lora
 lora_target: all
 
 ### dataset
-dataset: mllm_demo
+dataset: food101_retrieval_5
 template: llava
 cutoff_len: 1024
 max_samples: 1000
